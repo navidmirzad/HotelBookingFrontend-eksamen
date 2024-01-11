@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9059073e-cd0c-4ead-ae65-19516c9e762d" name="Changes" comment="GET: allhotels works fine, it fetches from database succesfully - shows correctly too">
-      <change afterPath="$PROJECT_DIR$/css/modalStyling.css" afterDir="false" />
+    <list default="true" id="9059073e-cd0c-4ead-ae65-19516c9e762d" name="Changes" comment="PUT: Hotel works looks nice too">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/addhotel.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/addhotel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/fetchHotel.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/fetchHotel.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +56,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1704968134859</updated>
-      <workItem from="1704968136156" duration="20114000" />
+      <workItem from="1704968136156" duration="20542000" />
     </task>
     <task id="LOCAL-00001" summary="Post Hotel + modal works fine">
       <created>1704971802743</created>
@@ -74,7 +72,14 @@
       <option name="project" value="LOCAL" />
       <updated>1704978937796</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="PUT: Hotel works looks nice too">
+      <created>1704992613358</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1704992613358</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,6 +99,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Post Hotel + modal works fine" />
     <MESSAGE value="GET: allhotels works fine, it fetches from database succesfully - shows correctly too" />
-    <option name="LAST_COMMIT_MESSAGE" value="GET: allhotels works fine, it fetches from database succesfully - shows correctly too" />
+    <MESSAGE value="PUT: Hotel works looks nice too" />
+    <option name="LAST_COMMIT_MESSAGE" value="PUT: Hotel works looks nice too" />
   </component>
 </project>

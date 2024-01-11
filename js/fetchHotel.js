@@ -95,10 +95,12 @@ function openEditModal(hotel) {
 
         if (response.ok) {
             alert("Hotel updated!");
+            window.location.reload();
         } else {
             const errorText = await response.text();
             console.error("Error:", errorText);
             alert("Hotel not updated");
+            window.location.reload();
         }
 
         editModal.style.display = "none";
