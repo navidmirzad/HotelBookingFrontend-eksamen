@@ -46,7 +46,6 @@ document.addEventListener('DOMContentLoaded', function () {
             if (response.ok) {
                 alert("Hotel added!");
                 window.location.reload();
-                window.location.href = "index.html"
             } else {
                 alert("Something went wrong");
                 window.location.reload();
