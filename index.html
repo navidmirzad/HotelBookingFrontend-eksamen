@@ -13,6 +13,7 @@
 <nav>
     <ul>
         <li><a id="postHotel" href="#">Add Hotel</a></li>
+        <li><a id="postRoom" href="#">Add Room</a></li>
         <li><a href="#allHotels">All Hotels</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
@@ -75,6 +76,34 @@
     </div>
 </section>
 
+<section id="PostRoomModal">
+    <div id="addRoom" class="modal">
+        <div class="modal-content">
+            <span id="closeRoomModal">&times;</span>
+            <form id="postRoomForm">
+
+                <h1>Add Room</h1>
+
+                <label for="hotelId">Hotel ID</label>
+                <select id="hotelId" name="hotelId" required></select>
+
+                <label for="roomnumber">Room Number</label>
+                <input type="text" id="roomnumber" name="roomnumber" required>
+
+                <br> <hr>
+                <label for="numberofbeds">Number of Beds</label>
+                <input type="text" id="numberofbeds" name="numberofbeds" required>
+
+                <br> <hr>
+                <label for="price">Price per night</label>
+                <input type="text" id="price" name="price" required>
+                <br> <hr>
+                <button type="submit" id="submitRoom">Add Room</button>
+            </form>
+        </div>
+    </div>
+</section>
+
 <section class="footer" id="contact">
     <div><a href="https://github.com/navidmirzad" target="_blank" rel="noopener" rel="noreferrer" class="social">
         <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="50" height="50" viewBox="0 0 24 24">
@@ -97,5 +126,6 @@
 
 <script src="js/addhotel.js"></script>
 <script src="js/fetchHotel.js"></script>
+<script src="js/addroom.js"></script>
 </body>
 </html>

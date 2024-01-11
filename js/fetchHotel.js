@@ -55,6 +55,7 @@ async function insertHotelCards(hotel) {
 
     const deleteButton = createDeleteHotelButton(hotel);
     hotelCardDiv.appendChild(deleteButton);
+
 }
 
 function openEditModal(hotel) {
@@ -159,7 +160,6 @@ async function deleteHotel(hotelId) {
         window.location.reload();
     }
 }
-
 
 async function fetchHotels() {
     const response = await fetch(urlBase);

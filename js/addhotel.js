@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var hotelModal = document.getElementById("addHotel");
-    var postBtn = document.getElementById("postHotel");
-    var closeButton = document.getElementById("closeHotelModal");
+    const hotelModal = document.getElementById("addHotel");
+    const postBtn = document.getElementById("postHotel");
+    const closeButton = document.getElementById("closeHotelModal");
 
     postBtn.onclick = function (event) {
         event.preventDefault();
@@ -55,8 +55,6 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log("")
         }
     });
-
-
 });
 
 async function postObjectAsJson(url, object, httpVerbum) {
