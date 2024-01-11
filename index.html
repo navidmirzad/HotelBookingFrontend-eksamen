@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/modalStyling.css">
+    <link rel="stylesheet" href="css/createaccount.css">
 
 </head>
 <body>
@@ -17,7 +18,61 @@
         <li><a href="#allHotels">All Hotels</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
+    <div class="sign-in">
+        <ul>
+            <li id="buttons">
+                <button id="loginButton" onclick="openLoginModal()">Sign In</button>
+                <button id="createButton" onclick="openCreateAccountModal()">Create Account</button>
+            </li>
+        </ul>
+    </div>
 </nav>
+
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span onclick="closeLoginModal()"
+              style="float:right;
+              cursor:pointer;">&times;
+        </span>
+        <h2 class="login-header">Login</h2>
+        <form method="post" id="modalLoginForm">
+            <label for="modalUsername">Username:</label>
+            <input type="text" id="modalUsername" name="modalUsername" required><br><br>
+            <label for="modalPassword">Password:</label>
+            <input type="password" id="modalPassword" name="modalPassword" required><br><br>
+            <div id="login-result"></div>
+            <button type="button" id="modalSubmitButton">Login</button>
+        </form>
+    </div>
+</div>
+
+<div id="createAccountModal" class="modal">
+    <div class="modal-content">
+        <span onclick="closeCreateAccountModal()" style="float:right; cursor:pointer;">&times;</span>
+        <h2 style="color: #2c2c2c;">Create Account</h2>
+        <form id="createAccountForm">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required><br><br>
+
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required><br><br>
+
+            <label for="phoneNumber">Phone Number</label>
+            <input type="number" id="phoneNumber" name="phoneNumber" required><br><br>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="userName">Username</label>
+            <input type="text" id="userName" name="userName" required><br><br>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <button type="submit" id="submitBtn">Create Account</button>
+        </form>
+    </div>
+</div>
 
 <div id="frontpagecontainer">
     <div id="frontpagepicture">
@@ -127,5 +182,7 @@
 <script src="js/addhotel.js"></script>
 <script src="js/fetchHotel.js"></script>
 <script src="js/addroom.js"></script>
+<script src="js/loginmodal.js"></script>
+<script src="js/createaccount.js"></script>
 </body>
 </html>

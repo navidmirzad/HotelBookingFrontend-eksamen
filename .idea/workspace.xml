@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9059073e-cd0c-4ead-ae65-19516c9e762d" name="Changes" comment="Can now addRooms + connect them to a hotel">
+    <list default="true" id="9059073e-cd0c-4ead-ae65-19516c9e762d" name="Changes" comment="can now view amount of rooms for each hotel">
+      <change afterPath="$PROJECT_DIR$/css/createaccount.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/createaccount.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/loginmodal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/fetchHotel.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/fetchHotel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,13 +18,16 @@
       <list>
         <option value="package.json" />
         <option value="HTML File" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/index.html" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -55,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1704968134859</updated>
-      <workItem from="1704968136156" duration="32183000" />
+      <workItem from="1704968136156" duration="36050000" />
     </task>
     <task id="LOCAL-00001" summary="Post Hotel + modal works fine">
       <created>1704971802743</created>
@@ -99,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705003489840</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="can now view amount of rooms for each hotel">
+      <created>1705005610059</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1705005610059</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,6 +136,7 @@
     <MESSAGE value="Page reloads on requests" />
     <MESSAGE value="DELETE: Hotel works" />
     <MESSAGE value="Can now addRooms + connect them to a hotel" />
-    <option name="LAST_COMMIT_MESSAGE" value="Can now addRooms + connect them to a hotel" />
+    <MESSAGE value="can now view amount of rooms for each hotel" />
+    <option name="LAST_COMMIT_MESSAGE" value="can now view amount of rooms for each hotel" />
   </component>
 </project>
