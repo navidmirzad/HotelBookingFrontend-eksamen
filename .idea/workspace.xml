@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9059073e-cd0c-4ead-ae65-19516c9e762d" name="Changes" comment="PUT: Hotel works looks nice too">
+    <list default="true" id="9059073e-cd0c-4ead-ae65-19516c9e762d" name="Changes" comment="Page reloads on requests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/addhotel.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/addhotel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/fetchHotel.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/fetchHotel.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +55,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1704968134859</updated>
-      <workItem from="1704968136156" duration="20542000" />
+      <workItem from="1704968136156" duration="21718000" />
     </task>
     <task id="LOCAL-00001" summary="Post Hotel + modal works fine">
       <created>1704971802743</created>
@@ -79,7 +78,14 @@
       <option name="project" value="LOCAL" />
       <updated>1704992613358</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Page reloads on requests">
+      <created>1704992839394</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1704992839394</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,6 +106,7 @@
     <MESSAGE value="Post Hotel + modal works fine" />
     <MESSAGE value="GET: allhotels works fine, it fetches from database succesfully - shows correctly too" />
     <MESSAGE value="PUT: Hotel works looks nice too" />
-    <option name="LAST_COMMIT_MESSAGE" value="PUT: Hotel works looks nice too" />
+    <MESSAGE value="Page reloads on requests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Page reloads on requests" />
   </component>
 </project>

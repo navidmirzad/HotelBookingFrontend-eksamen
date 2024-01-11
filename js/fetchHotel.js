@@ -1,11 +1,14 @@
 const urlBase = "http://localhost:8080/allhotels";
 
+const putUrl = "http://localhost:8080/edithotel";
+
+const deleteUrl = "http://localhost:8080/deletehotel";
+
 async function insertHotelCards(hotel) {
     const cardContainer = document.querySelector('.card-container');
     const hotelCardDiv = document.createElement("div");
     hotelCardDiv.className = "hotel-card";
     hotelCardDiv.setAttribute("data-id", hotel.hotelId);
-
 
     // Add styling to give an outline
     hotelCardDiv.style.border = "1px solid #ccc";
@@ -42,11 +45,16 @@ async function insertHotelCards(hotel) {
 
     const editButton = document.createElement("button");
     editButton.textContent = "Edit";
+    editButton.style.backgroundColor = "#ff8c00";
+    editButton.style.color = "white";
     hotelCardDiv.appendChild(editButton);
 
     editButton.addEventListener("click", function () {
         openEditModal(hotel);
     });
+
+    const deleteButton = createDeleteHotelButton(hotel);
+    hotelCardDiv.appendChild(deleteButton);
 }
 
 function openEditModal(hotel) {
@@ -88,8 +96,6 @@ function openEditModal(hotel) {
             country: editedCountry,
         };
 
-        const putUrl = "http://localhost:8080/edithotel";
-
         const response = await postObjectAsJson(putUrl + "/" + hotel.hotelId, editedHotel, "PUT");
         console.log("Response Status:", response.status);
 
@@ -119,6 +125,41 @@ function openEditModal(hotel) {
 
     editModal.style.display = "block";
 }
+
+function createDeleteHotelButton(hotel) {
+    const deleteButton = document.createElement("button");
+    deleteButton.innerText = "Delete";
+    deleteButton.className = "delete-hotel-btn";
+
+    deleteButton.style.backgroundColor = "red";
+    deleteButton.style.color = "white";
+
+    // Add a click event listener to delete the movie
+    deleteButton.addEventListener("click", async function () {
+        await deleteHotel(hotel.hotelId);
+    });
+
+    return deleteButton;
+}
+
+async function deleteHotel(hotelId) {
+    const url = `${deleteUrl}/${hotelId}`;
+    const response = await fetch(url, {
+        method: 'DELETE',
+    });
+
+    console.log(response);
+
+    if (response.status === 200) {
+        alert("Hotel deleted!");
+        window.location.reload();
+        return response;
+    } else {
+        alert("Hotel not deleted");
+        window.location.reload();
+    }
+}
+
 
 async function fetchHotels() {
     const response = await fetch(urlBase);
