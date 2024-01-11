@@ -5,17 +5,36 @@
     <title>Hotel Booking frontpage</title>
 
     <link rel="stylesheet" href="css/main.css">
-
 </head>
 <body>
 
 <nav>
     <ul>
         <li><a id="postHotel" href="#">Add Hotel</a></li>
-        <li><a href="index.html">All Hotels</a></li>
+        <li><a href="#allHotels">All Hotels</a></li>
         <li><a href="#">Contact</a></li>
     </ul>
 </nav>
+
+<div id="frontpagecontainer">
+    <div id="frontpagepicture">
+        <img src="images/hotel.avif" alt="Hotel Image" class="resized-image">
+    </div>
+    <div id="frontpagetext">
+        <h1>Welcome to Comfort</h1>
+        <p>Manage hotels, rooms, reservations and much more on our site</p>
+    </div>
+</div>
+
+<div class="main-div" id="allHotels">
+    <div class="hotel-div">
+    </div>
+    <div class="divider">
+    </div>
+    <div class="hotel-div">
+        <div id="hotels-container" class="card-container"></div>
+    </div>
+</div>
 
 
 <section id="sellSection">
@@ -67,7 +86,7 @@
     <br> <br>
 </section>
 
-
 <script src="js/addhotel.js"></script>
+<script src="js/fetchHotel.js"></script>
 </body>
 </html>
