@@ -1,9 +1,11 @@
 const urlBase = "http://localhost:8080/allhotels";
 
 async function insertHotelCards(hotel) {
+    const cardContainer = document.querySelector('.card-container');
     const hotelCardDiv = document.createElement("div");
-    hotelCardDiv.className = "card";
-    hotelCardDiv.setAttribute("data-id", hotel.hotelId); // Update this line
+    hotelCardDiv.className = "hotel-card";
+    hotelCardDiv.setAttribute("data-id", hotel.hotelId);
+
 
     // Add styling to give an outline
     hotelCardDiv.style.border = "1px solid #ccc";
@@ -17,14 +19,14 @@ async function insertHotelCards(hotel) {
     hotelName.innerText = hotel.name;
 
     const hotelId = document.createElement('p');
-    hotelId.innerText = "Hotel ID: " + hotel.hotelId; // Update this line
+    hotelId.innerText = "Hotel ID: " + hotel.hotelId;
 
     const hotelLocation = document.createElement('p');
     hotelLocation.innerText = `${hotel.street}, ${hotel.zipcode}, ${hotel.city}, ${hotel.country}`;
 
     const hotelLink = document.createElement("a");
     hotelLink.addEventListener("click", function () {
-        localStorage.setItem("hotelId", hotel.hotelId); // Update this line
+        localStorage.setItem("hotelId", hotel.hotelId);
         window.location.href = "showhotel.html";
     });
     hotelLink.innerText = "Click for more";
@@ -36,8 +38,84 @@ async function insertHotelCards(hotel) {
     hotelContent.appendChild(hotelLink);
     hotelCardDiv.appendChild(hotelContent);
 
-    const cardContainer = document.querySelector('.card-container');
     cardContainer.appendChild(hotelCardDiv);
+
+    const editButton = document.createElement("button");
+    editButton.textContent = "Edit";
+    hotelCardDiv.appendChild(editButton);
+
+    editButton.addEventListener("click", function () {
+        openEditModal(hotel);
+    });
+}
+
+function openEditModal(hotel) {
+    const editModal = document.getElementById("myModal2");
+    const modalForm = editModal.querySelector("form");
+
+    modalForm.innerHTML = `
+    <h3>Hotel name</h3>
+    <input type="hidden" name="id" value="${hotel.id}">
+    <input type="text" class="name" name="name" value="${hotel.name}" required>
+    <h3>Street</h3>
+    <input type="text" class="street" name="street" value="${hotel.street}" required>
+    <h3>City</h3>
+    <input type="text" class="city" name="city" value="${hotel.city}" required>
+    <h3>Zip code</h3>
+    <input type="text" class="zipcode" name="zipcode" value="${hotel.zipcode}" required>
+    <h3>Country</h3>
+    <input type="text" class="country" name="country" value="${hotel.country}" required>
+    <br> <br>
+    
+    <button id="update-hotel-btn">Update</button>
+  `;
+
+    const updateButton = modalForm.querySelector("#update-hotel-btn");
+    updateButton.addEventListener("click", async function (e) {
+        e.preventDefault();
+
+        const editedName = modalForm.querySelector(".name").value;
+        const editedStreet = modalForm.querySelector(".street").value;
+        const editedCity = modalForm.querySelector(".city").value;
+        const editedZipcode = modalForm.querySelector(".zipcode").value;
+        const editedCountry = modalForm.querySelector(".country").value;
+
+        const editedHotel = {
+            name: editedName,
+            street: editedStreet,
+            city: editedCity,
+            zipcode: editedZipcode,
+            country: editedCountry,
+        };
+
+        const putUrl = "http://localhost:8080/edithotel";
+
+        const response = await postObjectAsJson(putUrl + "/" + hotel.hotelId, editedHotel, "PUT");
+        console.log("Response Status:", response.status);
+
+        if (response.ok) {
+            alert("Hotel updated!");
+        } else {
+            const errorText = await response.text();
+            console.error("Error:", errorText);
+            alert("Hotel not updated");
+        }
+
+        editModal.style.display = "none";
+    });
+
+    const closeButton = editModal.querySelector(".close");
+    closeButton.addEventListener("click", function () {
+        editModal.style.display = "none";
+    });
+
+    window.addEventListener("click", function (event) {
+        if (event.target === editModal) {
+            editModal.style.display = "none";
+        }
+    });
+
+    editModal.style.display = "block";
 }
 
 async function fetchHotels() {
@@ -52,11 +130,7 @@ async function fetchHotels() {
 }
 
 function displayMyHotels(myHotels) {
-    const myHotelsContainer = document.getElementById("hotels-container");
-    myHotelsContainer.innerHTML = ""; // Clear existing content
-
     myHotels.forEach(hotel => {
-        console.log(hotel.id);
         insertHotelCards(hotel);
     });
 }

@@ -5,6 +5,8 @@
     <title>Hotel Booking frontpage</title>
 
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/modalStyling.css">
+
 </head>
 <body>
 
@@ -12,7 +14,7 @@
     <ul>
         <li><a id="postHotel" href="#">Add Hotel</a></li>
         <li><a href="#allHotels">All Hotels</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
 
@@ -29,15 +31,22 @@
 <div class="main-div" id="allHotels">
     <div class="hotel-div">
     </div>
-    <div class="divider">
-    </div>
     <div class="hotel-div">
         <div id="hotels-container" class="card-container"></div>
     </div>
 </div>
 
+<section id="modal2">
+    <div id="myModal2" class="modal">
+        <div class="modal-content2">
+            <span class="close">&times;</span>
+            <form method></form>
+            </form>
+        </div>
+    </div>
+</section>
 
-<section id="sellSection">
+<section id="PostHotelModal">
     <div id="addHotel" class="modal">
         <div class="modal-content">
             <span id="closeHotelModal">&times;</span>
@@ -47,19 +56,19 @@
 
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
-
+                <br> <hr>
                 <label for="street">Street</label>
                 <input type="text" id="street" name="street" required>
-
+                <br> <hr>
                 <label for="city">City</label>
                 <input type="text" id="city" name="city" required>
-
+                <br> <hr>
                 <label for="zipcode">Zip Code</label>
                 <input type="text" id="zipcode" name="zipcode" required>
-
+                <br> <hr>
                 <label for="country">Country</label>
                 <input type="text" id="country" name="country" required>
-
+                <hr>
                 <button type="submit" id="submitHotel">Add hotel</button>
             </form>
         </div>
