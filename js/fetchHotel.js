@@ -24,6 +24,14 @@ async function insertHotelCards(hotel) {
     const hotelId = document.createElement('p');
     hotelId.innerText = "Hotel ID: " + hotel.hotelId;
 
+    // Fetch hotel info including room count
+    const hotelInfoUrl = "http://localhost:8080/roomcount";
+    const hotelInfoResponse = await fetch(hotelInfoUrl);
+    const hotelInfoList = await hotelInfoResponse.json();
+
+    // Find the corresponding hotel DTO in the hotelInfoList
+    const hotelInfo = hotelInfoList.find(hotelDTO => hotelDTO.hotel.hotelId === hotel.hotelId);
+
     const hotelLocation = document.createElement('p');
     hotelLocation.innerText = `${hotel.street}, ${hotel.zipcode}, ${hotel.city}, ${hotel.country}`;
 
@@ -37,6 +45,13 @@ async function insertHotelCards(hotel) {
     hotelCardDiv.appendChild(hotelName);
     hotelCardDiv.appendChild(hotelId);
     hotelCardDiv.appendChild(hotelLocation);
+    if (hotelInfo) {
+        // Display room count information
+        const roomCountInfo = document.createElement('p');
+        roomCountInfo.innerText = `Number of Rooms: ${hotelInfo.roomCount} rooms`;
+        hotelCardDiv.appendChild(roomCountInfo);
+    }
+
 
     hotelContent.appendChild(hotelLink);
     hotelCardDiv.appendChild(hotelContent);
@@ -55,7 +70,6 @@ async function insertHotelCards(hotel) {
 
     const deleteButton = createDeleteHotelButton(hotel);
     hotelCardDiv.appendChild(deleteButton);
-
 }
 
 function openEditModal(hotel) {

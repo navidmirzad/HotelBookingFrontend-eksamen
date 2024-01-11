@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9059073e-cd0c-4ead-ae65-19516c9e762d" name="Changes" comment="DELETE: Hotel works">
-      <change afterPath="$PROJECT_DIR$/js/addroom.js" afterDir="false" />
+    <list default="true" id="9059073e-cd0c-4ead-ae65-19516c9e762d" name="Changes" comment="Can now addRooms + connect them to a hotel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/modalStyling.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/modalStyling.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/addhotel.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/addhotel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/fetchHotel.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/fetchHotel.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +55,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1704968134859</updated>
-      <workItem from="1704968136156" duration="30253000" />
+      <workItem from="1704968136156" duration="32183000" />
     </task>
     <task id="LOCAL-00001" summary="Post Hotel + modal works fine">
       <created>1704971802743</created>
@@ -96,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1704994058094</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Can now addRooms + connect them to a hotel">
+      <created>1705003489840</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1705003489840</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +122,7 @@
     <MESSAGE value="PUT: Hotel works looks nice too" />
     <MESSAGE value="Page reloads on requests" />
     <MESSAGE value="DELETE: Hotel works" />
-    <option name="LAST_COMMIT_MESSAGE" value="DELETE: Hotel works" />
+    <MESSAGE value="Can now addRooms + connect them to a hotel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Can now addRooms + connect them to a hotel" />
   </component>
 </project>
